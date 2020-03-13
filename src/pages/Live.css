@@ -1,0 +1,114 @@
+.Live_Profile{
+    margin-right: 15px;
+}
+
+.Live_Profile_nick{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(137, 177, 182);
+    height: 60px;
+    margin-top:50px;
+    padding-left:10px;
+}
+
+.Live_Contents{
+    height: 450px;
+    background-image: url("../img/반고흐창.jpg");
+    border-left: 6px solid rgb(137, 177, 182);
+    border-right: 6px solid rgb(137, 177, 182);
+    color:white;
+    padding:10px;
+}
+
+.Live_css{
+    width: 400px;
+}
+
+.Live_topCss{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../img/노란벽지.jpg");
+    height: 100%;
+}
+
+.Live_topCss .Live_footer{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    text-decoration: none;
+}
+
+.Live_Profile, .Live_nickName{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.l_nick_text{
+    font-size: 18px;
+}
+
+.Live_footer{
+    border: 6px solid rgb(137, 177, 182);
+}
+
+.Live_btn{
+    margin-top:2px;
+    border: none;
+    cursor: pointer;
+    width: 84px;
+    height: 70px;
+    background-color:rgb(137, 177, 182);
+    color:white;
+    font-size: 15px;
+}
+
+.Live_footer div{
+    background-color: rgb(137, 177, 182);
+}
+
+.Live_btn:hover{
+    color:yellow
+}
+
+.l_nick_text{
+    color:yellow;
+}
+
+.l_nick_text:hover{
+    color:orange
+}
+
+.Live_img{
+    border-radius: 100%;
+}
+
+
+
+.Live_Chat{
+    padding:10px;
+    border-radius: 5px;
+    background-color: rgb(146, 22, 230);
+    color:white;
+    font-weight: bolder;
+    width: 200px;
+}
+
+.Live_Chat_Me{
+    padding:10px;
+    border-radius: 5px;
+    background-color: rgb(230, 51, 191);
+    color:white;
+    width: 200px;
+    font-weight: bolder;
+    align-self: flex-end;
+}
+
+
+.Live_Chats{
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+

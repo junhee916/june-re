@@ -1,0 +1,46 @@
+.Login{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(137, 177, 182) ;
+}
+
+.btn3{
+    width:454px;
+    height: 60px;
+    margin:5px;
+}
+
+.item5{
+    padding:15px;
+}
+
+.titleNick{
+    font-size: 90px;
+    font-weight:bolder;
+    margin-bottom: 60px;
+}
+
+.inputSize{
+    width: 450px;
+    height: 50px;
+}
+
+.agreeBtn{
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.agreeBtn2{
+    font-size: 30px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.kakao{
+    filter:  grayscale(100)
+}

@@ -1,0 +1,61 @@
+.select_background{
+    background-image: url("../img/book_select.jpg");
+    height: 700px;
+    width: 1500px;
+    margin-left:10px;
+    margin-top:20px;
+}
+
+.select_img{
+    width:300px;
+    height: 500px;
+    margin-top:70px;
+}
+
+.select_book{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.select_page{
+    display: flex;
+    flex-direction: row;
+    margin-top:-400px;
+}
+
+.select_item, .Select_button{
+    margin:60px;
+    cursor: pointer;
+}
+
+.Select_button{
+    width:150px;
+    height: 65px;
+    font-size: 35px;
+    font-weight: bolder;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:400px;
+    border-radius: 15px;
+    color:black
+}
+
+.page_posts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:30px;
+}
+
+.select_item{
+    background-color: white;
+    width:70px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}

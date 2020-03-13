@@ -1,0 +1,107 @@
+.bookreg_background{
+    background-image: url("../img/flower.jpg");
+    height: 700px;
+    width: 1500px;
+    margin-left:10px;
+    margin-top:20px;
+}
+
+.bookreg_posts{
+    height: 730px;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+
+.bookreg_contents{
+    background-color: white;
+    height: 600px;
+    width: 800px;
+    border-radius: 20px;
+}
+
+.bookreg_background>div{
+    margin-left:30px;
+}
+
+.hole{
+    margin-top:50px;
+}
+
+.hole2{
+    margin-top:20px;
+}
+
+.img_book{
+    background-color: pink;
+    width: 350px;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.img_book_file{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin-left:20px;
+}
+
+.reg_name{
+    display: flex;
+    flex-direction: column;
+    background-color: pink;
+    width: 350px;
+    height: 550px;
+    border-radius: 10px;
+    margin-top:20px;
+}
+
+.total_bookreg{
+    display: flex;
+    flex-direction: row;
+}
+
+.img_book>img{
+    width:300px;
+    height:500px;
+}
+
+.book_name_date{
+    margin-top:30px;
+    margin-left:30px;
+    height: 450px;
+}
+
+.book_name_date>div{
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.book_name_date input{
+    font-size: 20px;
+}
+
+.book_send{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book_send>div{
+    width: 100px;
+    height: 55px;
+    font-size: 25px;
+    background-color: white;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+

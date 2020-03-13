@@ -1,0 +1,49 @@
+
+
+
+footer{
+    height: 155px;
+    width: 100%;
+    border-top:3px solid rgb(207, 199, 199);
+    background-color: white;
+}
+
+.ft{
+    margin-left: 220px;
+}
+
+.nav{
+    font-weight: bolder;
+    margin-top: 10px;
+    
+}
+
+.item7, .font{
+    margin-right:15px;
+}
+
+.item7, .font{
+    display: flex;
+    flex-direction: column;
+}
+
+.item7{
+    font-weight: bolder;
+}
+
+.main{
+    margin-top:10px;
+    display: flex; flex-direction: row;
+  
+}
+
+.copyright{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+
+
+
+

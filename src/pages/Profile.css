@@ -1,0 +1,138 @@
+.contents_profile::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+   
+  .contents_profile::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+  }
+
+  .contents_profile{
+    height: 100%;
+    background: whitesmoke;
+    overflow: scroll;
+    margin: 0 auto;
+    padding: 3em;
+    font: 100%/1.4 serif;
+    border: 1px solid rgba(0,0,0,0.25);
+    background-color: rgb(137, 177, 182);
+    font-family: 'Nanum+Gothic','Robot'
+
+  }
+
+.profile{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top:30px;
+}
+
+.basic{
+    display: flex;
+    flex-direction: row;
+    width:100%
+    
+}
+.nick{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left:10px;
+}
+
+.Profile_imgChange, .Profile_nickChange, .imgChange_Upload{
+    display: flex;
+    flex-direction: row;
+}
+
+.Profile_Upload{
+    display: flex;
+    flex-direction: column;
+}
+
+.Profile_imgChange>.Profile_imgText, .Profile_nickChange>.Profile_nickText{
+    width:150px;
+    border-right:2px solid black;
+    padding:30px;
+    font-weight: bolder;
+    background-color:rgb(66, 92, 95) ;
+}
+
+.Profile_imgChange{
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.Profile_nickChange{
+    border-bottom: 2px solid black;
+}
+
+.ProfileImg{
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    margin-top: 30px;
+    margin-left:30px;
+    margin-bottom: 20px;
+}
+
+.Profile_nickChange>input{
+    height: 20px;
+    padding:5px;
+    margin:30px;
+}
+
+.imgChange_Upload{
+    margin-left:30px;
+}
+
+.profile button{
+    border: none;
+    cursor: pointer;
+}
+
+.profile_middle{
+    margin-top:50px;
+}
+
+.profile_fix{
+    margin-bottom: 10px;
+}
+
+.profile_handler{
+    margin-top:30px;
+    width: 80px;
+    background-color: white;
+    font-weight: bolder;
+}
+
+.imgChange_Upload>input{
+    width: 200px;
+}
+
+.profile>div{
+    width: 700px;
+}
+
+.imgChange_Upload button{
+    margin-bottom: 30px;
+    background-color: white;
+    font-weight: bolder;
+}
+
+.profile_handlers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.key_background{
+    background-color: yellow;
+}
+
+
+
+
+
