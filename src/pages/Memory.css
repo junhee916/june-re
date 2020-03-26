@@ -8,6 +8,7 @@
 
 .ib{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top:70px;
@@ -57,7 +58,6 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    position: relative;
     background-color: gold;
     border-radius: 15px;
 }
@@ -77,8 +77,6 @@
     align-items: center;
     width:100%;
     margin-bottom: 80px;
-    margin-top:1420px;
-    position: absolute;
 }
 
 

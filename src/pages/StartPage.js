@@ -77,7 +77,6 @@ const Start = function(props){
            <Link to="/select"><div className="ldg">
            <div className="landing"><img src={Grow} className="ld"/></div>
            <h1 className="item">새싹(to do)</h1></div></Link>
-          
            </div>}
            <div className="miky"><img src={logo} className="logo"/></div>
            <h1 className="jun"><img src={growActions} className="domain"/></h1>

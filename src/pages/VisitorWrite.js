@@ -11,6 +11,9 @@ import TopImg from '../img/top_background.jpg'
 import Messege from '../img/메신저.png'
 import Grow from '../img/새싹.png'
 import Input from '../img/등록.png'
+import flower_choice from '../img/flower_choice.png'
+import select_img from '../img/select img.png'
+import select_img2 from '../img/select img2.png'
 import './VisitorWrite.css'
 import './VisitorList.css'
 
@@ -18,15 +21,23 @@ const VisitorWrite = function(props){
 
     const [users, setUsers] = useState([])
     const [boards, setBoards] = useState([])
+    const [currentPage, setCurrentPage] = useState(1)
+    const [pages, setPages] = useState([])
 
     useEffect(() => {
         axios.get("/user").then(function(response){
             setUsers(response.data.users)
         })
     
-        axios.get("/board").then(function(response){
-            console.log(response.data.boards)
+        axios.get('/board?page=1').then(function(response){
+            const totalPageCount = Math.ceil(response.data.boards.length / 3)
+            const pages = []
+            for(let i = 1; i <= totalPageCount; i++){
+                pages.push(i)
+            }
+            setPages(pages)
             setBoards(response.data.boards)
+            console.log(response.data)
         })
     }, [])
 
@@ -107,7 +118,7 @@ const VisitorWrite = function(props){
                 <div className="home2"><img src={Home}/></div>
                 <h1 className="item">홈</h1></div>
             </Link>
-            <Link to="/landing">
+            <Link to="/visitors">
                 <div className="v">
                     <div className="visi">
                         <img src={Visitor}/>
@@ -138,23 +149,41 @@ const VisitorWrite = function(props){
            </div>
         </div>
         </div>
+
+{/* pages */}
         <div className="list_post">
-            {boards.map(function(board, index){
-                return(<div className="list01" key={index}>
-                    <div className="l_p_i">
-                     <div className="l_p">
-                      <div className="p_img3"><img className="p_img3_1" src={board.profile_url ? board.profile_url : Basic }/></div>
-                      <div className="nickname2">{board.nickName ? board.nickName : "비회원" }</div>
-                     </div>
-                    </div> 
-                    <div className="l_t">
-                     <div className="nick">Title <div className="b_t">{board.title}</div></div>
-                     <div className="txt">{board.content}</div>
-                    </div>
-                    </div>
-                )
+            {boards.slice((currentPage-1)*3, (currentPage)*3).map(function(board){
+                 return(
+                 <div className="list01">
+                 <div className="l_p_i">
+                  <div className="l_p">
+                   <div className="p_img3"><img className="p_img3_1" src={board.profile_url ? board.profile_url : Basic }/></div>
+                   <div className="nickname2">{board.nickName ? board.nickName : "비회원" }</div>
+                  </div>
+                 </div> 
+                 <div className="l_t">
+                  <div className="nick">Title <div className="b_t">{board.title}</div></div>
+                  <div className="txt">{board.content}</div>
+                 </div>
+                 </div>
+             )
             })}
-        </div>
+            </div>
+            <div className="page">
+            <div onClick={() => setCurrentPage(currentPage - 1)}><img src={select_img2} className="btn_select"/></div>
+            {pages.map(function(page){
+                if(page === currentPage) {
+                    return (
+                        <div onClick={() => { setCurrentPage(page) }}><img src={flower_choice} className="flower_choice"/></div>
+                    )
+                } else {
+                    return (
+                        <div onClick={() => { setCurrentPage(page) }}>{page}</div>
+                    )
+                }
+            })}
+            <div onClick={() => setCurrentPage(currentPage + 1)}><img src={select_img} className="btn_select"/></div>
+            </div>
         </div>
         <div className="pp"></div>
         </div> 

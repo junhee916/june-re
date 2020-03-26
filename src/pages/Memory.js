@@ -23,7 +23,7 @@ const Memory = function(props){
     useEffect(() => {
         console.log("초기화!")
       
-        axios.get(`/recentList2?page=1`).then(function(response){
+        axios.get(`/recentList?page=1`).then(function(response){
             const totalPageCount = Math.ceil(response.data.list.length / 11)
             const pages = []
             for(let i = 1; i <= totalPageCount; i++){
@@ -32,6 +32,7 @@ const Memory = function(props){
             setPages(pages)
             setLists(response.data.list)
         })
+
     }, [])
 
     const clickHandler = function(){
@@ -50,12 +51,12 @@ const Memory = function(props){
         
 
         console.log(props.wr)
-        const sdfsdfsdfdsfdsf = {
+        const body = {
            seq : seq,
            wr : props.wr,
         }
         
-        axios.post("/addListForBook", sdfsdfsdfdsfdsf).then(function(response){
+        axios.post("/addListForBook", body).then(function(response){
             if(response.data.isSuccess===true){
                 console.log(response.data.isSuccess)
             }
@@ -96,16 +97,19 @@ const Memory = function(props){
                 )
             })}
             <div className="list_choice">
-                <div onClick={() => {
+                {currentPage !==1 &&
+                 <div onClick={() => {
                     setCurrentPage(currentPage - 1)
                 }} className="list_click">
                     <div><img src={Left}/></div>
-                    </div>
-                <div onClick={() => {
+                    </div>}
+                
+                {currentPage !== pages.length&&
+                   <div onClick={() => {
                     setCurrentPage(currentPage + 1)
                 }} className="list_click">
                     <div><img src={Right}/></div>
-                    </div>
+                    </div>}
             </div>
             </div>
            </div>}

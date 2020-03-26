@@ -1,11 +1,11 @@
 .list_post{
-    height: 100%;
+    height: 1100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width:100%;
-    margin-bottom: 80px;
+    margin-top:-180px;
 }
 
 .list01{

@@ -56,16 +56,20 @@ const LandingPage = function(props){
                 )
             })}
             <div className="memo_choice">
-                <div onClick={() => {
+                {currentPage !==1 &&
+                 <div onClick={() => {
                     setCurrentPage(currentPage - 1)
                 }} className="memo_click">
                     <div><img src={Left}/></div>
-                    </div>
+                    </div>}
+                    
+                {currentPage !== pages.length&&
                 <div onClick={() => {
                     setCurrentPage(currentPage + 1)
                 }} className="memo_click">
                     <div><img src={Right}/></div>
-                    </div>
+                    </div>}
+               
             </div>
             </div>
            </div>
