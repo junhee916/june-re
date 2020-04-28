@@ -24,7 +24,7 @@ const KakaoLoginPage = (props) => {
             console.log(response.data)
             if(response.data.isSuccess === true ){
                     props.login(response.data.name, response.data.age, response.data.secret_token, response.data.profile_url, response.data.nickName)
-                    props.history.push("/landing")
+                    props.history.push("/start")
 
             } else {
                 props.history.push("/err")

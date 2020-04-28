@@ -1,24 +1,11 @@
-.contents_profile::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  }
-   
-  .contents_profile::-webkit-scrollbar-thumb {
-    background-color: darkgrey;
-    outline: 1px solid slategrey;
-  }
-
+.profile_total_ctrl{
+    height: 683px;
   .contents_profile{
     height: 100%;
-    background: whitesmoke;
-    overflow: scroll;
-    margin: 0 auto;
-    padding: 3em;
-    font: 100%/1.4 serif;
-    border: 1px solid rgba(0,0,0,0.25);
     background-color: rgb(137, 177, 182);
-    font-family: 'Nanum+Gothic','Robot'
-
+    font-family: 'Nanum+Gothic','Robot';
   }
+}
 
 .profile{
     display:flex;
@@ -26,7 +13,6 @@
     justify-content: center;
     align-items: center;
     height: 100%;
-    margin-top:30px;
 }
 
 .basic{
@@ -67,6 +53,15 @@
 
 .Profile_nickChange{
     border-bottom: 2px solid black;
+   
+    input{
+        height: 20px;
+        padding:5px;
+        margin:30px;
+        font-size: 20px;
+        font-weight: bolder;
+    }
+
 }
 
 .ProfileImg{
@@ -78,11 +73,6 @@
     margin-bottom: 20px;
 }
 
-.Profile_nickChange>input{
-    height: 20px;
-    padding:5px;
-    margin:30px;
-}
 
 .imgChange_Upload{
     margin-left:30px;
@@ -99,13 +89,6 @@
 
 .profile_fix{
     margin-bottom: 10px;
-}
-
-.profile_handler{
-    margin-top:30px;
-    width: 80px;
-    background-color: white;
-    font-weight: bolder;
 }
 
 .imgChange_Upload>input{
@@ -126,11 +109,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 30px;
+    div{
+        font-size: 30px;
+        font-weight: bolder;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 50px;
+        border:5px solid black;
+        border-radius: 10px;
+        cursor: pointer;
+        &:hover{
+            background-color: tomato;
+        }
+    }
 }
 
-.key_background{
-    background-color: yellow;
-}
 
 
 

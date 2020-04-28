@@ -15,22 +15,23 @@ import AgreePage from './pages/AgreePage'
 import movePage from './pages/movePage'
 import Profile from './pages/Profile'
 import Memory from './pages/Memory'
-import Live from './pages/Live'
 import KakaoLoginPage from './pages/KakaoLoginPage'
 import BookReg from './pages/BookReg'
 import B from './pages/B'
-import Add from './pages/Add'
 import Select from './pages/Select'
-import ErrorPage from './pages/ErrorPage'
-
 import Header from './components/Header'
+import Document from './pages/Documentation'
+import History from './pages/History'
+import Img from './pages/ImgUpload'
+import Live from './pages/Live'
 
 function App() {
   	return (
     	<BrowserRouter>
 		 <Provider store={store}>
 			 <Switch>
-			 <Route exact path="/" component={StartPage}/>
+			 <Route exact path="/" component={Document}/>
+			 <Route path="/start" component={StartPage}/>
 			<Route path="/login" component={LoginPage}/>
 			<Route path="/err" component={ErrPage}/>
 			<Route path="/private" component={PrivatePage}/>
@@ -41,15 +42,14 @@ function App() {
 			<Route path="/move" component={movePage}/>
 			<Route path="/profile" component={Profile}/>
 			<Route path="/memory" component={Memory}/>
-			<Route path="/live" component={Live}/>
 			<Route path="/kakaoLogin" component={KakaoLoginPage}/>
 			<Route path="/header" component={Header}/>
 			<Route path="/bookreg" component={BookReg}/>
 			<Route path="/b" component={B}/>
-			<Route path="/add" component={Add}/>
 			<Route path="/select" component={Select}/>
-			<Route path="/" component={ErrorPage}/>
-
+			<Route path="/history" component={History}/>
+			<Route path="/live" component={Live}/>
+			<Route path="/img" component={Img}/>
 			</Switch>
 			</Provider>
 		</BrowserRouter>

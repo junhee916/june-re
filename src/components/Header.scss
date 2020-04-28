@@ -1,0 +1,126 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.header_posts{
+    background-color: black;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.header_menu{
+    filter: brightness(0) invert(1);
+    width:60px;
+    height: 60px;
+    cursor: pointer;
+    position:relative;
+}
+
+.logout_btn_ctrl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logout_btn{
+    height: 50px;
+    width: 110px;
+    font-size: 28px;
+    color:black;
+    background-color: white;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    cursor: pointer;
+    &:hover{
+        background-color: tomato;
+    }
+}
+
+.logout_btn_ctrl{
+    margin-right:10px;
+}
+
+.nickname_logout{
+    display:flex;
+    flex-direction: row;
+}
+
+.user_nickname{
+    color:white;
+    font-size: 28px;
+    cursor: pointer;
+
+    &:hover{
+        color: tomato;
+    }
+}
+
+.user_nickname_ctrl{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.header_main_menu{
+    background-color: black;
+    height: 689px;
+    width:220px;
+    position: absolute;
+    display: flex;
+    flex-direction: column; 
+}
+
+.icon{
+    color:white;
+    font-size: 30px;
+    height: 60px;
+    display:flex;
+    flex-direction: row;
+    margin-top:25px;
+    margin-left:20px;
+}
+
+.icon>img{
+    filter: brightness(0) invert(1);
+    width:40px;
+    height: 40px;
+    margin-right: 15px;
+}
+
+.change_text{
+    cursor: pointer;
+    color: white;
+
+    &:hover{
+        color: tomato;
+    }
+}
+
+.header_day_text{
+    color:white;
+    font-size: 25px;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: row;
+}
+
+.header_day_detail{
+    margin-left:10px;
+}
+
+.header_day_total{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left:-755px;
+}

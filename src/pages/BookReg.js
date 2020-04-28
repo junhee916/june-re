@@ -1,6 +1,6 @@
 import React, { useState, useEffect} from 'react'
 import {connect} from 'react-redux'
-import './Profile.css'
+import './Profile.scss'
 import *as actionCreators from '../store/actionCreators'
 import '../pages/BookReg.css'
 import axios from 'axios';
@@ -33,7 +33,13 @@ const BookReg = function(props){
     }
 
     useEffect(function(){
-        axios.get("/book").then(function(response){
+        const config = {
+            headers: {
+                auth : props.secret_token
+            }
+        }
+
+        axios.get("/book", config).then(function(response){
             if(response.data.isSuccess===true){
 
             }
@@ -51,13 +57,15 @@ const BookReg = function(props){
         const config = {
             headers: {
                 'Content-Type': 'multipart/form-data',
+                auth : props.secret_token
             }
         }
 
         axios.post("/addBook", form, config).then(function(response){
+            console.log(response.data)
             if(response.data.isSuccess===true){
-                console.log(response.date)
-                props.history.push("/")
+                console.log("나실행중")
+                props.history.push("/start")
             }
         })
     }
@@ -102,7 +110,9 @@ const connectedBookReg = connect(function(state){
     return {
        book_url:state.book_url,
        book_name:state.book_name,
-       date:state.date
+       date:state.date,
+
+       secret_token : state.secret_token
     }
 },function(dispatch){
     return{

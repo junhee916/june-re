@@ -1,0 +1,164 @@
+
+.Start_default{
+    height: 683px;
+
+.contents_default{
+    background-color: rgb(137, 177, 182);
+    font-family: 'Nanum+Gothic','Robot';
+    height: 77%;
+    .action_book_list_ctrl{
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        margin-left:20px;
+        justify-content: space-between;
+        .actionlist_ctrl{
+            width:580px;
+            height:450px;
+            margin-left:220px;
+            margin-top:30px;
+            border: 8px solid black;
+            display: flex;
+            flex-direction: column;
+          .hot_grow{
+            font-weight: bolder;
+            font-size: 40px;
+            margin-top:10px;
+           }
+         
+           .actionlist_posts{
+            width:525px;
+            height:360px;
+            margin-top:10px;
+            margin-left:20px;
+            background-color: black;
+          .book_map{
+              height: 300px;
+              width: 525px;
+              display: flex;
+              flex-direction: row;
+            .todo_img{
+                width: 500px;
+                height: 250px;
+                margin-top:30px;
+                margin-left:30px;
+
+                img{
+                    width:200px;
+                    height: 250px;
+                    border:7px solid white;
+                }
+            }
+        }
+        }
+        .page{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 30px;
+                height: 30px;
+                cursor: pointer;
+                filter: brightness(0) invert(1);
+            }
+            .book_page{
+              cursor: pointer;
+              color:white;
+              font-size:30px;
+
+              &:hover{
+                  color:tomato;
+              }
+            }
+        }
+}
+
+        .actionlist_right_ctrl{
+             width: 580px;
+             height:450px;
+             margin-left:80px;
+             margin-top:30px;
+             margin-right:50px;
+             border: 8px solid black;
+        .actionlist_add_ctrl{
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+            .hot_grow{
+             font-weight: bolder;
+             font-size: 40px;
+             margin-top:10px;
+             }
+             
+           .book_add_btn_ctrl{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top:10px;
+            margin-left:10px;
+            .actionlist_add_btn{
+            font-size: 40px;
+            font-weight: bolder;
+            border:5px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width:100px;
+            height: 45px;
+            cursor: pointer;
+              
+            &:hover{
+                background-color: tomato;
+            }
+            }
+        }  
+        
+         }
+         .actionlist_posts{
+            width:525px;
+            height:360px;
+            margin-top:10px;
+            margin-left:20px;
+            background-color: black;
+          .book_map{
+              height: 300px;
+              flex-wrap: wrap;
+              display: flex;
+              flex-direction: row;
+              width: 525px;
+            img{
+                width: 69px;
+                height: 100px;
+                margin-top:20px;
+                margin-left:25px;
+                border:3px solid white;
+            }
+        }
+        }
+        .page{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 30px;
+                height: 30px;
+                cursor: pointer;
+                filter: brightness(0) invert(1);
+            }
+            .book_page{
+              cursor: pointer;
+              color:white;
+              font-size:30px;
+
+              &:hover{
+                  color:tomato;
+              }
+            }
+        }
+}
+}
+}
+
+}

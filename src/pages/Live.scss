@@ -1,0 +1,165 @@
+
+.Live_topCss{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../img/노란벽지.jpg");
+    height: 100%;
+    flex-direction: row;
+    background-color: white;
+    text-decoration: none;
+
+    .fitting{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        position:fixed;
+        .fitting_background{
+          width: 1000px;
+          height: 600px;
+          background-image: url(../img/편지.jpg);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          div{
+            width: 250px;
+            height: 70px;
+            font-size: 50px;
+            font-weight: bolder;
+            border: 7px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 150px;
+            border-radius: 10px;
+            cursor: pointer;
+            &:hover{
+              background-color: tomato;
+            }
+          }
+        }
+      }
+
+    .Live_css{
+        width: 400px;
+        height: 650px;
+        background-image: url("../img/반고흐창.png");
+
+        .Live_Profile_Total{
+            width: 340px;
+            height: 490px;
+            margin-left: 30px;
+
+        .Live_Profile_nick{
+            display: flex;
+            flex-direction: row;
+            background-color: rgb(137, 177, 182);
+            height: 60px;
+            margin-top:80px;
+            padding-left:10px;
+
+            .Live_Profile{
+                margin-right: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .Live_img{
+                    border-radius: 100%;
+                }
+                
+            }
+
+            .Live_Profile{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .Live_nickName{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .l_nick_text{
+                    font-size: 18px;
+                    color:black;
+                    &:hover{
+                        color:tomato
+                    }
+                }
+            }
+            
+        }
+
+        .Live_Contents{
+            border-left: 6px solid rgb(137, 177, 182);
+            border-right: 6px solid rgb(137, 177, 182);
+            height: 320px;
+            color:white;
+            padding:10px;
+
+
+            .Live_Chats{
+                margin-bottom: 10px;
+                display: flex;
+                flex-direction: column;
+            
+            .Live_Chat{
+                padding:10px;
+                border-radius: 5px;
+                background-color: rgb(146, 22, 230);
+                color:white;
+                font-weight: bolder;
+                width: 200px;
+            }
+
+            .Live_Chat_Me{
+                padding:10px;
+                border-radius: 5px;
+                background-color: rgb(230, 51, 191);
+                color:white;
+                width: 200px;
+                font-weight: bolder;
+                align-self: flex-end;
+            }
+
+        }
+        }
+        
+    }
+    .Live_footer{
+        border: 6px solid rgb(137, 177, 182);
+        display: flex;
+        flex-direction: row;
+        background-color: white;
+        text-decoration: none;
+        .Live_btn{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+            cursor: pointer;
+            width: 90px;
+            height: 72.4px;
+            background-color:yellow;
+
+            color:black;
+            font-size: 25px;
+            font-weight: bolder;
+            border-radius: 10px;
+    
+            &:hover{
+                background-color:tomato
+            }
+        }
+        textarea{
+            border-right:6px solid rgb(137, 177, 182);
+        }
+        div{
+            background-color: rgb(137, 177, 182); 
+        }
+    }
+}
+}
+

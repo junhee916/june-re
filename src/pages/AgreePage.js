@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import axios from 'axios'
 import {connect} from 'react-redux'
 import *as actionCreators from '../store/actionCreators'
-import './AgreePage.css'
+import './AgreePage.scss'
 
 const Agree = function(props){
     
@@ -78,29 +78,24 @@ const Agree = function(props){
     return(
         <div className="Input">
         <div className="Agree">
-            <h1 className="ga_header">growActions</h1>
+            <h1 className="agree_header">growActions</h1>
             <div className="agree_input">
-            <div className="item3">ID</div>
-            <div>
-              <div onClick={checkHandler}>{
-                    props.done===true?
-                    <div className="double_clear">중복확인 완료</div>
-                    :
-                    <div className="double">중복확인</div>
-                    }</div>
+            <div className="id_ctrl">
+              <div className="id_text">ID</div>
+              <div className="double" onClick={checkHandler}>중복확인</div>          
             </div>
           
-            <div><input value={props.id} onChange={idInputHandler}/></div>
+            <div><input value={props.id} onChange={idInputHandler} className="agree_input_text"/></div>
             <div className="item3">PW</div>
-            <div><input value={props.pw} onChange={pwInputHandler} type="password"/></div>
+            <div><input value={props.pw} onChange={pwInputHandler} type="password" className="agree_input_text"/></div>
             <div className="item3">NAME</div>
-            <div><input value={props.name} onChange={nameInputHandler}/></div>
+            <div><input value={props.name} onChange={nameInputHandler} className="agree_input_text"/></div>
             <div className="item3">BIRTH</div>
-            <div><input value={props.birth} onChange={birthInputHandler}/></div>
+            <div><input value={props.birth} onChange={birthInputHandler} className="agree_input_text"/></div>
             <div className="item3">NUMBER</div>
-            <div className="item4"><input value={props.number} onChange={numberInputHandler}/></div>
+            <div className="item4"><input value={props.number} onChange={numberInputHandler} className="agree_input_text"/></div>
             <div className="item3">NICKNAME</div>
-            <div className="item4"><input value={props.nickName} onChange={nickNameInputHandler}/></div>
+            <div className="item4"><input value={props.nickName} onChange={nickNameInputHandler} className="agree_input_text"/></div>
             </div>
             <div onClick={addClickHandler} className="agree_login">Login</div>
 

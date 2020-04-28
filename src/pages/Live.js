@@ -5,7 +5,7 @@ import *as actionCreators from '../store/actionCreators'
 import {connect} from 'react-redux'
 import axios from 'axios'
 import Basic from '../img/basic.jpg'
-import '../pages/Live.css'
+import '../pages/Live.scss'
 
 const socket = io("http://localhost")
 
@@ -13,6 +13,11 @@ const Live = (props) => {
     const [msg, setMsg] = useState("");
     const [mySocketId, setMySocketId] = useState(null)
     const [chatLists, setChatLists] = useState([])
+    const [isOpend, setIsOpend] = useState(true)
+
+    const openClickHandler = function(){
+        setIsOpend(!isOpend)
+    }
 
     const clickHandler = () => {
 
@@ -47,11 +52,22 @@ const Live = (props) => {
 
     return (
         <div className="Live_topCss">
+      {isOpend&&
+        <div className="fitting">
+           <div className="fitting_background">
+              <div onClick={openClickHandler}>응 원</div> 
+           </div>
+        </div>
+    }
+
         <div className="Live_css">
+        
+         <div className="Live_Profile_Total">
           <div className="Live_Profile_nick">
            <div className="Live_Profile"><img src={props.profile_url === "" ? Basic : props.profile_url} className="Live_img"/></div>
            <div className="Live_nickName"><Link to="/profile"><h1 className="l_nick_text">{props.nickName}</h1></Link></div>
            </div>
+
             <div className="Live_Contents">
                 {chatLists.map(chat => {
                     return (
@@ -65,10 +81,15 @@ const Live = (props) => {
                     )
                 })}
             </div>
+
             <div className="Live_footer">
             <textarea placeholder="chatting*" form="inform" cols="40" rows="5" autoFocus required wrap="hard" value={msg} onChange={(e) => { setMsg(e.currentTarget.value) }}/>
-            <div><button onClick={clickHandler} className="Live_btn">전송</button></div>
+            <div><div onClick={clickHandler} className="Live_btn">Send</div></div>
             </div>
+
+            </div>
+
+
         </div>
         </div>
     )

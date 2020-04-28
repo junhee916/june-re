@@ -5,8 +5,8 @@ const initialState = {
     age: localStorage.getItem("age"),
     isLogin: Boolean(localStorage.getItem("isLogin")),
     secret_token: localStorage.getItem("secret_token"),
-    title: null,
-    content :null,
+    title: "",
+    content :"",
     nickName: localStorage.getItem("nickname"),
     id: null,
     pw: null,
@@ -96,6 +96,7 @@ const reducer = function(state=initialState, action){
         }
     }
     else if (action.type === actionTypes.UPDATE_PROFILEURL){
+        localStorage.setItem("profile_url", action.profile_url)
         return{
             ...state,
             profile_url: action.profile_url

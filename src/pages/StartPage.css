@@ -1,15 +1,5 @@
 
 
-.posts{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: black;
-    position: fixed;
-    width: 100%;
-    z-index: 9999;
-}
-
 .menu{
     display: flex;
     flex-direction: column;
@@ -17,7 +7,7 @@
     top: 53.6px;
     background-color: black;
 left: -15px;
-height: 1151%;
+height: 100%;
 }
 
 .item, .item2{
@@ -70,7 +60,7 @@ button{
 }
 
 .Start {
-    height: 100%;
+    height: 100%
 }
 
 
@@ -114,7 +104,8 @@ img{
 }
 
 .item{
-    font-size: 15px;
+    font-size: 25px;
+    font-weight: bolder;
 }
 
 .home2, .visi, .live{
@@ -126,7 +117,7 @@ img{
 
 .contents{
     background-color: rgb(137, 177, 182);
-    font-family: 'Nanum+Gothic','Robot'
+    font-family: 'Nanum+Gothic','Robot';
 }
 
 .s_nick{
@@ -229,15 +220,6 @@ img{
 
 .list_wr{
     padding:5px
-}
-
-.page{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-top:30px;
-    cursor: pointer;
 }
 
 .btn_select, .flower_choice{

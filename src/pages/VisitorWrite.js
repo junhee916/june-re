@@ -10,27 +10,22 @@ import Choice from '../img/choice.png'
 import TopImg from '../img/top_background.jpg'
 import Messege from '../img/메신저.png'
 import Grow from '../img/새싹.png'
-import Input from '../img/등록.png'
-import flower_choice from '../img/flower_choice.png'
 import select_img from '../img/select img.png'
 import select_img2 from '../img/select img2.png'
-import './VisitorWrite.css'
-import './VisitorList.css'
+import './VisitorWrite.scss'
 
 const VisitorWrite = function(props){
 
-    const [users, setUsers] = useState([])
     const [boards, setBoards] = useState([])
     const [currentPage, setCurrentPage] = useState(1)
     const [pages, setPages] = useState([])
+    const [isOpend, setIsOpend] = useState(true)
 
     useEffect(() => {
-        axios.get("/user").then(function(response){
-            setUsers(response.data.users)
-        })
-    
+       
         axios.get('/board?page=1').then(function(response){
-            const totalPageCount = Math.ceil(response.data.boards.length / 3)
+            console.log(response.body)
+            const totalPageCount = Math.ceil(response.data.boards.length / 2)
             const pages = []
             for(let i = 1; i <= totalPageCount; i++){
                 pages.push(i)
@@ -41,10 +36,14 @@ const VisitorWrite = function(props){
         })
     }, [])
 
-
+    const clickHandler = function(){
+        setIsOpend(!isOpend)
+    }
 
     const addClickHandler = function(){
+        console.log("1 addclick 실행")
         if(props.secret_token){
+            console.log(props.secret_token)
             console.log("로그인 된 사람의 글쓰기")
             const body = { 
                 content : props.content,
@@ -88,13 +87,20 @@ const VisitorWrite = function(props){
     const onContentChangeHandler = function(e){
         props.updateContent(e.currentTarget.value)
     }
-  
 
     return(
-        <div>
-        <div className="total">
-
+        <div>   
+        <div className="total">        
         
+        {isOpend&&
+        <div className="fitting">
+           <div className="fitting_background">
+              <div onClick={clickHandler}>응 원</div> 
+           </div>
+        </div>
+    }
+
+   
         <div className="bet_r">
          <div className="menu_2"></div>
         </div> 
@@ -113,46 +119,44 @@ const VisitorWrite = function(props){
          </div>
 
            <div className="menu3">
-             <Link to="/">
+             <Link to="/start">
                 <div className="h">
                 <div className="home2"><img src={Home}/></div>
-                <h1 className="item">홈</h1></div>
+                <div className="item">Home</div></div>
             </Link>
             <Link to="/visitors">
                 <div className="v">
                     <div className="visi">
                         <img src={Visitor}/>
                     </div>
-                    <h1 className="item">방명록</h1>
+                    <div className="item">Visitor</div>
                 </div>
             </Link>
             <Link to="/live"><div className="l">
            <div className="live"><img src={Messege} className="l2"/></div>
-           <h1 className="item">메신저</h1></div></Link>
-           <Link to="/bookreg"><div className="l">
-           <div className="live"><img src={Input} className="l2"/></div>
-           <h1 className="item">등록</h1></div></Link>
-           <Link to="/landing"><div className="ldg">
+           <div className="item">Messege</div></div></Link>
+           <Link to="/select"><div className="ldg">
            <div className="landing"><img src={Grow} className="ld"/></div>
-           <h1 className="item">새싹</h1></div></Link>
+           <div className="item">To Do</div></div></Link>
          </div>  
         </div>
 
         <div className="writes">
         <div className="Write">
-        <div className="VisitorWrite">
-            <div className="vi2">Please leave a message on the guest book.</div>
-            <div>
-            <div className="vi3"><input placeholder="title*" value={props.title} onChange={onTitleChangeHandler}/></div>
-            <div className="vi"><textarea placeholder="review*" form="inform" cols="40" rows="10" autoFocus required wrap="hard" value={props.content} onChange={onContentChangeHandler}/></div>
-           <div className="vi4"><button onClick={addClickHandler}>send</button></div>
+        <div>
+            <div className="visitor_text">Visitor</div>
+            <div className="title_review">
+            <div className="title_text">Title <input placeholder="title*" value={props.title} onChange={onTitleChangeHandler}/></div>
+            <div><textarea placeholder="review*" form="inform" cols="40" rows="10" autoFocus required wrap="hard" value={props.content} onChange={onContentChangeHandler}/></div>
            </div>
+           <div><div className="visitor_send_btn" onClick={addClickHandler}>Send</div></div>
         </div>
         </div>
 
 {/* pages */}
         <div className="list_post">
-            {boards.slice((currentPage-1)*3, (currentPage)*3).map(function(board){
+            <div className="list_ctrl">
+            {boards.slice((currentPage-1)*2, (currentPage)*2).map(function(board){
                  return(
                  <div className="list01">
                  <div className="l_p_i">
@@ -168,17 +172,18 @@ const VisitorWrite = function(props){
                  </div>
              )
             })}
+             </div>
             </div>
-            <div className="page">
+            <div className="visitor_page">
             <div onClick={() => setCurrentPage(currentPage - 1)}><img src={select_img2} className="btn_select"/></div>
             {pages.map(function(page){
                 if(page === currentPage) {
                     return (
-                        <div onClick={() => { setCurrentPage(page) }}><img src={flower_choice} className="flower_choice"/></div>
+                        <div onClick={() => { setCurrentPage(page) }} className="visitor_page">{page}</div>
                     )
                 } else {
                     return (
-                        <div onClick={() => { setCurrentPage(page) }}>{page}</div>
+                        <div onClick={() => { setCurrentPage(page) }} className="visitor_page">{page}</div>
                     )
                 }
             })}
@@ -190,6 +195,7 @@ const VisitorWrite = function(props){
         </div>
 
         <div className="menu_3"></div>
+
         </div>
         </div>
     )

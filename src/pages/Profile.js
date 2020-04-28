@@ -1,7 +1,7 @@
 import React, { useState} from 'react'
 import Basic from '../img/basic.jpg'
 import {connect} from 'react-redux'
-import './Profile.css'
+import './Profile.scss'
 import *as actionCreators from '../store/actionCreators'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
@@ -37,6 +37,7 @@ const Profile = function(props){
         axios.post("/upload_s3", form, config).then(function(response){
             console.log(response.data)
             if(response.data.isSuccess === true){                
+                console.log(response.data.profile_url)
                 props.updateProfileUrl(response.data.profile_url)
                 alert("프로필 사진 업데이트 완료!")
             }
@@ -63,7 +64,7 @@ const Profile = function(props){
     }
 
     return(
-        <div className="LandingPage">
+        <div className="profile_total_ctrl">
             <div className="header"><Header/></div>
         <div className="contents_profile">
         <div className="profile">
@@ -88,11 +89,10 @@ const Profile = function(props){
             </div>
             </div>
             </div>
-            <div className="profile_handlers"><button onClick={clickHandler01} className="profile_handler">적용</button></div>
+            <div className="profile_handlers"><div onClick={clickHandler01}>적 용</div></div>
             </div>
         </div>
         </div>
-        <div className="footer"><Footer/></div>
         </div>
     )
 
