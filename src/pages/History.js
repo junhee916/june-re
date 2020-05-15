@@ -13,8 +13,8 @@ const History = function(props){
 
   useEffect(() => {    
 
-      axios.get(`/Img`).then(function(response){
-          setImg(response.data.Img)
+      axios.get(`/img`).then(function(response){
+          setImg(response.data.img)
       })
   }, [])
     return(
